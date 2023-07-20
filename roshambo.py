@@ -70,4 +70,3 @@ def death():
 
 
 start()
-#hello
