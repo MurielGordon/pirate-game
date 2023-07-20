@@ -37,6 +37,7 @@ class Death(Scene):
     ]
 
     def enter(self):
+        import skull
         print(Death.quips[randint(0, len(self.quips)-1)])
         exit(1)
 
