@@ -62,6 +62,7 @@ def start():
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
+            import skull
 
 
 def death():

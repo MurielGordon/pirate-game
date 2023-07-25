@@ -167,6 +167,8 @@ class BosunTalk(Scene):
             And the bosun is just dumb enough to fall for it. While he's doing that, you run around him and head
             for the stern of the ship, hoping to dive over the side and swim away.
             """))
+            import time
+            time.sleep(10)
             return 'walk_plank'
 
 

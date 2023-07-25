@@ -45,4 +45,5 @@ else:
     
     You are kicked into the sea and you drown.
     """))
+    import skull
     exit(1)
