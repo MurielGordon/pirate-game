@@ -28,8 +28,7 @@ the captain of the ship.
 "Make this little stowaway walk the plank!" she orders."""
 ))
 
-#import time
-#time.sleep(15)
+#time.sleep(17)
 
 print(dedent("""
 You're pushed towards a plank that is conviently standing ready to plunge idiots like yourself to their deaths.
@@ -63,7 +62,7 @@ if action == "whale":
 
 else:
     print(dedent("""
-    Your lack of sea shanty knowledge is embarrassing and you should be embarressed.
+    Your lack of sea shanty knowledge is embarrassing and you should be embarrassed.
     
     You are kicked into the sea and you drown.
     """))

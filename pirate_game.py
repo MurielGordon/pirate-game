@@ -67,20 +67,18 @@ class ShipsBrig(Scene):
         You are on a ship, locked away in the brig.
         
         A voice croaks "You've got yourself in quite the scrape, eh? I'll remove those manacles if you can guess
-        which cup the key is under."\n\n
+        which cup the key is under."
         """))
 
-        #import time
         #time.sleep(15)
 
         print(dedent("""
-        You look down and see that your wrists are held in heavy iron manacles. You peer through the brig's darkness
+        \n\nYou look down and see that your wrists are held in heavy iron manacles. You peer through the brig's darkness
         and see a wizened old man grinning toothlessly at you. His hands rest on two wooden cups turned upside down on the 
         table in front of him. He begins to slide them around on a small wooden table, laughing cruelly all the while.
         
         "If you guess wrong, old Hammertoes here will use his knife on you," the old man says, pointing to a capuchin
-        monkey perched on a crate next to him. The monkey screams and bangs the butt of a dagger on the top of the
-        crate.
+        monkey perched on a crate next to him. The monkey screams and bangs the butt of a dagger on the crate's lid.
         
         Which of the cups do you pick? 1 or 2?"""))
 
@@ -90,8 +88,7 @@ class ShipsBrig(Scene):
         loading()
         
         if int(guess) != correct_cup:
-            print(f"You pick cup number {guess}.")
-            #time.sleep(3)
+            print(f"\n\nYou pick cup number {guess}.")
             print(dedent("""
                          The old man cackles wickedly. He lifts the cup to reveal not a 
                          key, but a small stone. 
@@ -100,12 +97,11 @@ class ShipsBrig(Scene):
                          """))
             return 'death'
         else:
-            print(f"You pick cup number {guess}.")
-            #time.sleep(3)
+            print(f"\n\nYou pick cup number {guess}.")
             print(dedent(f"""
                          The old man scowls. He lifts the cup to reveal a small key, then
                          grudginlgy unlocks your manacles. You rush past him and run up the stairs, then turn right
-                         to find find yourself facing a closed door.
+                         to find yourself facing a closed door.
                          """))
             return 'ships_magazine'
 
@@ -113,13 +109,12 @@ class ShipsBrig(Scene):
 class ShipsMagazine(Scene):
     def enter(self):
         print(dedent("""
-        You burst through the door and close it behind you. You have no idea what you're doing on this ship, but you've got to
+        You burst through the door and slam it behind you. You have no idea what you're doing on this ship, but you've got to
         find a way off it.
         """))
-        #import time
-        #time.sleep(12)
+        #time.sleep(14)
         print(dedent("""
-        You look around and find that you are in the ship's magazine. Stacked barrels of gunpowder line the walls
+        \n\nYou look around and find that you are in the ship's magazine. Stacked barrels of gunpowder line the walls
         around you. Pyrotechnics are just the thing to distract what seems to be a very unfriendly crew of pirates.
         
         How best to use this gunpowder? Should you throw a match and run?
@@ -153,7 +148,7 @@ class ShipsMagazine(Scene):
 
             "Fooling with the powder are ye? And who might ye be?"
             """))
-            #time.sleep(10)
+            #time.sleep(11)
             return 'bosun_talk'
 
 
@@ -197,19 +192,17 @@ class WalkPlank(Scene):
         print(dedent("""
         You get to the stern and look down at the water below. It's a long way down. But it's your only way out.
         """))
-        #import time
-        #time.sleep(12)
+       #time.sleep(13)
         import sea_shanty
         return 'mermaid_encounter'
 
 
 class MermaidEncounter(Scene):
     def enter(self):
-        #import time
         #time.sleep(10)
         print(dedent("""
         The velocity of your plunge sends you deep under the water. You kick your feet and swim back up to the surface.
-        You gasp as you surface and you hear the sound of the pirates laughing up above you. They jeer and mock you as
+        You gasp as you surface and you hear the sound of the pirates laughing above you. They jeer and mock you as
         you swim away but you ignore them. You have a long swim to an island to focus on. 
 
         You make tracks. 
@@ -235,7 +228,6 @@ class MermaidEncounter(Scene):
 
 class Finished(Scene):
     def enter(self):
-        #import time
         #time.sleep(12)
         print(dedent("""
         You make it to the island. You crawl ashore and collapse on the warm sand.
