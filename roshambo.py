@@ -1,10 +1,26 @@
+import sys
+import time
 import random
 from sys import exit
 from textwrap import dedent
+
+
+def loading():
+    loading = 0
+    loading_speed = 3
+    loading_string = "." * 6
+    for i in range(2):
+        for index, char in enumerate(loading_string):
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(1.0 / loading_speed)
+        index += 1
+        sys.stdout.write("\b" * index + " " * index + "\b" * index)
+        sys.stdout.flush()
         
 
 user_action = input("Choose your weapon: rock, paper, or scissors: ")
-import loading
+loading()
 possible_actions = ["rock", "paper", "scissors"]
 computer_action = random.choice(possible_actions)
 print(f"\nYou chose {user_action}, the mermaid chose {computer_action}.\n")

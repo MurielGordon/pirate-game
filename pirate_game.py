@@ -1,6 +1,22 @@
+import sys
+import time
 from sys import exit
 from random import randint
 from textwrap import dedent
+
+
+def loading():
+    loading = 0
+    loading_speed = 3
+    loading_string = "." * 6
+    for i in range(2):
+        for index, char in enumerate(loading_string):
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(1.0 / loading_speed)
+        index += 1
+        sys.stdout.write("\b" * index + " " * index + "\b" * index)
+        sys.stdout.flush()
 
 
 class Scene(object):
@@ -71,8 +87,8 @@ class ShipsBrig(Scene):
         correct_cup = randint(1,2)
         guess = input("[cup #]> ")
 
-        #import loading
-
+        loading()
+        
         if int(guess) != correct_cup:
             print(f"You pick cup number {guess}.")
             #time.sleep(3)
@@ -113,7 +129,7 @@ class ShipsMagazine(Scene):
 
         action = input("> ")
 
-        import loading
+        loading()
 
         if action == "yes":
             print(dedent("""
@@ -155,7 +171,7 @@ class BosunTalk(Scene):
 
         action = input("> ")
         
-        import loading
+        loading()
 
         if "trip" in action:
             print(dedent("""

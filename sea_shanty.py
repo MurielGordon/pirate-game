@@ -1,5 +1,20 @@
+import sys
+import time
 from sys import exit
 from textwrap import dedent
+
+def loading():
+    loading = 0
+    loading_speed = 3
+    loading_string = "." * 6
+    for i in range(2):
+        for index, char in enumerate(loading_string):
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(1.0 / loading_speed)
+        index += 1
+        sys.stdout.write("\b" * index + " " * index + "\b" * index)
+        sys.stdout.flush()
 
 print(dedent("""
 \n\n\nRough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
@@ -36,7 +51,7 @@ What's the last word of the shanty?
 
 action = input("> ")
 
-import loading
+loading()
 
 if action == "whale":
     print(dedent("""
