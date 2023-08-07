@@ -71,6 +71,8 @@ class ShipsBrig(Scene):
         correct_cup = randint(1,2)
         guess = input("[cup #]> ")
 
+        #import loading
+
         if int(guess) != correct_cup:
             print(f"You pick cup number {guess}.")
             #time.sleep(3)
@@ -111,6 +113,8 @@ class ShipsMagazine(Scene):
 
         action = input("> ")
 
+        import loading
+
         if action == "yes":
             print(dedent("""
             You light a match and throw it, immediately turning to rush out the door.
@@ -150,6 +154,8 @@ class BosunTalk(Scene):
         """))
 
         action = input("> ")
+        
+        import loading
 
         if "trip" in action:
             print(dedent("""
@@ -167,8 +173,6 @@ class BosunTalk(Scene):
             And the bosun is just dumb enough to fall for it. While he's doing that, you run around him and head
             for the stern of the ship, hoping to dive over the side and swim away.
             """))
-            import time
-            time.sleep(10)
             return 'walk_plank'
 
 
@@ -177,19 +181,26 @@ class WalkPlank(Scene):
         print(dedent("""
         You get to the stern and look down at the water below. It's a long way down. But it's your only way out.
         """))
+        #import time
+        #time.sleep(12)
         import sea_shanty
         return 'mermaid_encounter'
 
 
 class MermaidEncounter(Scene):
     def enter(self):
+        #import time
+        #time.sleep(10)
         print(dedent("""
         The velocity of your plunge sends you deep under the water. You kick your feet and swim back up to the surface.
         You gasp as you surface and you hear the sound of the pirates laughing up above you. They jeer and mock you as
         you swim away but you ignore them. You have a long swim to an island to focus on. 
 
         You make tracks. 
+        """))
+        #time.sleep(16)
 
+        print(dedent("""
         As you swim, you feel a tug on your leg. You turn and find that a mermaid has grabbed hold of your ankle. What
         now???
 
@@ -208,11 +219,13 @@ class MermaidEncounter(Scene):
 
 class Finished(Scene):
     def enter(self):
+        #import time
+        #time.sleep(12)
         print(dedent("""
         You make it to the island. You crawl ashore and collapse on the warm sand.
         When you catch your breath, you sit up and look around. 
         On the island are many coconut trees, laden with fruit.
-        Under one you see a huge chest. It is so full of its contents that the lid cracks open.
+        Under one you see a huge chest. It is so full that the lid cracks open.
         The glint of gold can be seen from within the chest.
         Next to the chest is a bottle of rum and a handheld transciever.
         You should have no problem calling for help on that radio.

@@ -2,7 +2,7 @@ from sys import exit
 from textwrap import dedent
 
 print(dedent("""
-Rough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
+\n\n\nRough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
 
 "So this is who has been blundering around my ship," a voice says as another pair of hands tie your wrists 
 behind your back.
@@ -10,9 +10,14 @@ behind your back.
 You are spun around to face a tall elegantly dressed woman with an aura of authority about her. This must be
 the captain of the ship.
 
-"Make this little stowaway walk the plank!" she orders.
+"Make this little stowaway walk the plank!" she orders."""
+))
 
-You're pushed towards a plank that is conviently standing ready to plunge idiots like yourself to your death.
+#import time
+#time.sleep(15)
+
+print(dedent("""
+You're pushed towards a plank that is conviently standing ready to plunge idiots like yourself to their deaths.
 You walk out onto it at swordpoint. You stand, shivering, staring at the water below you. If you had the use
 of your hands you could swim easily, but without them...
 
@@ -30,6 +35,8 @@ What's the last word of the shanty?
 """))
 
 action = input("> ")
+
+import loading
 
 if action == "whale":
     print(dedent("""

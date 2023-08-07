@@ -4,6 +4,7 @@ from textwrap import dedent
         
 
 user_action = input("Choose your weapon: rock, paper, or scissors: ")
+import loading
 possible_actions = ["rock", "paper", "scissors"]
 computer_action = random.choice(possible_actions)
 print(f"\nYou chose {user_action}, the mermaid chose {computer_action}.\n")
@@ -62,10 +63,10 @@ def start():
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
-            import skull
 
 
 def death():
+    import skull
     print("You are dead you are so dead.")
     exit(1)
 
