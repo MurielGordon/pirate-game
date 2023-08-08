@@ -17,7 +17,7 @@ def loading():
         sys.stdout.flush()
 
 print(dedent("""
-\n\n\nRough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
+\n\nRough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
 
 "So this is who has been blundering around my ship," a voice says as another pair of hands tie your wrists 
 behind your back.
@@ -28,9 +28,10 @@ the captain of the ship.
 "Make this little stowaway walk the plank!" she orders."""
 ))
 
-#time.sleep(17)
+time.sleep(17)
 
 print(dedent("""
+\n\n
 You're pushed towards a plank that is conviently standing ready to plunge idiots like yourself to their deaths.
 You walk out onto it at swordpoint. You stand, shivering, staring at the water below you. If you had the use
 of your hands you could swim easily, but without them...
@@ -50,13 +51,14 @@ What's the last word of the shanty?
 
 action = input("> ")
 
-loading()
+#loading()
 
 if action == "whale":
     print(dedent("""
     You got it right!
     Your bonds are cut and you're kicked forward on the plank.
     Nothing for it. Best be getting it over with.
+    
     You jump in.
     """))
 
