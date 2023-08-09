@@ -81,8 +81,13 @@ if action == "whale":
     """))
 
 else:
-    print(dedent("""
+    print(dedent(f"""
     \n\n
+    You guessed {action}??? 
+    The bonny ship The Diamond goes a-fishing for the {action}????
+    
+    That doesn't make any sense!
+    
     Your lack of sea shanty knowledge is embarrassing and you should be embarrassed.
     
     You are kicked into the sea and you drown.
