@@ -48,14 +48,16 @@ def start():
             sword()
             print(dedent("""
             Rock smashes scissors! You win!
-            \nThe mermaid sighs with disappointment.
+            
+            The mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Paper covers rock. You lose.
-            \nThe mermaid smiles and reaches out to grab you.
+            
+            The mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
@@ -64,14 +66,16 @@ def start():
             sword()
             print(dedent("""
             Paper covers rock! You win!
-            \nThe mermaid sighs with disappointment.
+            
+            The mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Scissors cuts paper. You lose.
-            \nThe mermaid smiles and reaches out to grab you.
+            
+            The mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
@@ -80,14 +84,16 @@ def start():
             sword()
             print(dedent("""
             Scissors cuts paper! You win!
-            \nThe mermaid sighs with disappointment.
+            
+            The mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Rock smashes scissors. You lose.
-            \nThe mermaid smiles and reaches out to grab you.
+            
+            The mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
