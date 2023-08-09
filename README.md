@@ -12,5 +12,5 @@ These mini programs are roshambo.py, sea_shanty.py, skull.py, and sword.py.
 The smaller files are to fulfill requirement #2:
 "Use more than one file, and use import to use them."
 
-You will need to create files for all three mini programs to run pirate-game.py.
+You will need to create files for all four mini programs to run pirate-game.py.
 
