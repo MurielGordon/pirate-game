@@ -71,11 +71,12 @@ class ShipsBrig(Scene):
         which cup the key is under."
         """))
 
-        time.sleep(15)
+        #time.sleep(15)
 
         print(dedent("""
         \n\n
         ___________________________
+        \n
         You look down and see that your wrists are held in heavy iron manacles. You peer through the brig's darkness
         and see a wizened old man grinning toothlessly at you. His hands rest on two wooden cups turned upside down on the 
         table in front of him. He begins to slide them around on a small wooden table, laughing cruelly all the while.
@@ -100,8 +101,8 @@ class ShipsBrig(Scene):
                          """))
             return 'death'
         else:
-            import sword
-            print(f"\nYou pick cup number {guess}.")
+            sword()
+            print(f"You pick cup number {guess}.")
             print(dedent(f"""
                          The old man scowls. He lifts the cup to reveal a small key, then
                          grudginlgy unlocks your manacles. You rush past him and run up the stairs, then turn right
@@ -120,6 +121,7 @@ class ShipsMagazine(Scene):
         print(dedent("""
         \n\n
         ___________________________
+        \n
         You look around and find that you are in the ship's magazine. Stacked barrels of gunpowder line the walls
         around you. Pyrotechnics are just the thing to distract what seems to be a very unfriendly crew of pirates.
         
@@ -143,10 +145,11 @@ class ShipsMagazine(Scene):
             return 'death'
         
         elif action == "no":
-            import sword
+            sword()
             print(dedent("""
-            \n\n
-            You know better than to go lighting matches in a room full of gunpowder. You look around for a fuse
+            You know better than to go lighting matches in a room full of gunpowder. 
+                         
+            You look around for a fuse
             and find a bundle of them in a sack next to the door. You open kegs of gunpowder, pouring it
             in a line leading up to the door. 
             """))
@@ -154,6 +157,7 @@ class ShipsMagazine(Scene):
             print(dedent("""
             \n\n
             ___________________________
+            \n
             You lay the fuse and go to open the door. You plan to stretch your fuse out away from the
             powder so that you can light it safely. A voice behind you says:
 
@@ -167,6 +171,8 @@ class BosunTalk(Scene):
     def enter(self):
         print(dedent("""
         \n\n
+        ___________________________
+        \n
         The ship's bosun found you! 
 
         "I ought to run ye through my with me cutlass!" the bosun hollers. He raises the sword and prepares to
@@ -191,8 +197,8 @@ class BosunTalk(Scene):
             return 'death'
         
         elif "distract" or "trick" in action:
+            sword()
             print(dedent("""
-            \n\n
             "Look behind you!" you yell, "A three headed monkey!"
 
             And the bosun is just dumb enough to fall for it. While he's doing that, you run around him and head
@@ -216,6 +222,8 @@ class MermaidEncounter(Scene):
         time.sleep(10)
         print(dedent("""
         \n\n
+        ___________________________
+        \n
         The velocity of your plunge sends you deep under the water. You kick your feet and swim back up to the surface.
         You gasp as you surface and you hear the sound of the pirates laughing above you. They jeer and mock you as
         you swim away but you ignore them. You have a long swim to an island to focus on. 
@@ -226,6 +234,8 @@ class MermaidEncounter(Scene):
 
         print(dedent("""
         \n\n
+        ___________________________
+        \n
         As you swim, you feel a tug on your leg. You turn and find that a mermaid has grabbed hold of your ankle. What
         now???
 
@@ -247,15 +257,21 @@ class Finished(Scene):
         time.sleep(12)
         print(dedent("""
         \n\n
+        ___________________________
+        \n             
         You make it to the island. You crawl ashore and collapse on the warm sand.
+        
         When you catch your breath, you sit up and look around. 
-        On the island are many coconut trees, laden with fruit.
+        On the island are coconut trees laden with fruit.
         Under one you see a huge chest. It is so full that the lid cracks open.
         The glint of gold can be seen from within the chest.
+        
         Next to the chest is a bottle of rum and a handheld transciever.
         You should have no problem calling for help on that radio.
+        
         But first, some rum, and maybe an hour or two to take inventory of the treasure chest.
         You grin happily.
+        
         You won! Good job!
         """))
         return 'finished'
@@ -282,6 +298,13 @@ class Map(object):
     def opening_scene(self):
         return self.next_scene(self.start_scene)
     
+def sword():
+    print("""      
+\n\n      
+      \\
+[]oooo|==================>
+  \___/
+""")
 
 a_map = Map('ships_brig')
 a_game = Engine(a_map)

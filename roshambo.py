@@ -17,6 +17,14 @@ def loading():
         index += 1
         sys.stdout.write("\b" * index + " " * index + "\b" * index)
         sys.stdout.flush()
+
+def sword():
+    print("""      
+\n\n      
+      \\
+[]oooo|==================>
+  \___/
+""")
         
 
 user_action = input("Choose your weapon: rock, paper, or scissors: ")
@@ -28,6 +36,7 @@ print(f"\n\nYou chose {user_action}, the mermaid chose {computer_action}.\n")
 
 def start():
     if user_action == computer_action:
+        sword()
         print(f"You both selected {user_action}. It's a tie!")
         print(dedent("""
         The mermaid sighs with disappointment.
@@ -36,46 +45,49 @@ def start():
         """))
     elif user_action == "rock":
         if computer_action == "scissors":
+            sword()
             print(dedent("""
             Rock smashes scissors! You win!
-            The mermaid sighs with disappointment.
+            \nThe mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Paper covers rock. You lose.
-            The mermaid smiles and reaches out to grab you.
+            \nThe mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
     elif user_action == "paper":
         if computer_action == "rock":
+            sword()
             print(dedent("""
             Paper covers rock! You win!
-            The mermaid sighs with disappointment.
+            \nThe mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Scissors cuts paper. You lose.
-            The mermaid smiles and reaches out to grab you.
+            \nThe mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
     elif user_action == "scissors":
         if computer_action == "paper":
+            sword()
             print(dedent("""
             Scissors cuts paper! You win!
-            The mermaid sighs with disappointment.
+            \nThe mermaid sighs with disappointment.
             "You won fair and square. So I'll let you go," she says.
             You swim away, grateful to have won.
             """))
         else:
             print(dedent("""
             Rock smashes scissors. You lose.
-            The mermaid smiles and reaches out to grab you.
+            \nThe mermaid smiles and reaches out to grab you.
             She drowns you in the crystal clear Caribbean water.
             """))
             death()
