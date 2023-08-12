@@ -20,14 +20,9 @@ def loading():
 
 
 class Scene(object):
-    # is any of the stuff right below this necessary? I never see it print these two things:
-    # what if I write "pass" under this instead?
-    # "pass" doesn't seem to change anything about the behavior...so...I'll keep it I guess
     def enter(self):
         pass
-        #print("This scene is not yet configured.")
-        #print("Subclass it and implement enter().")
-        #exit(1)
+        
 
 
 class Engine(object):
