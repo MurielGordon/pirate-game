@@ -31,13 +31,14 @@ print(dedent("""
 \n\n
 ___________________________
 \n             
-Rough hands seize you from behind. You struggle, but it's no use, the hands are like iron.
+Rough hands seize you from behind.
+You struggle, but it's no use, the hands are like iron.
 
-"So this is who has been blundering around my ship," a voice says as another pair of hands tie your wrists 
-behind your back.
+"So this is who has been blundering around my ship," a voice says as another pair of hands
+tie your wrists behind your back.
 
-You are spun around to face a tall elegantly dressed woman with an aura of authority about her. This must be
-the captain of the ship.
+You are spun around to face a tall elegantly dressed woman with an aura of authority about her.
+This must be the captain of the ship.
 
 "Make this little stowaway walk the plank!" she orders."""
 ))
@@ -48,12 +49,13 @@ print(dedent("""
 \n\n
 ___________________________
 \n
-You're pushed towards a plank that is conviently standing ready to plunge idiots like yourself to their deaths.
-You walk out onto it at swordpoint. You stand, shivering, staring at the water below you. If you had the use
-of your hands you could swim easily, but without them...
+You're pushed towards a plank that is standing ready to plunge idiots like you to their deaths.
+You walk out onto it at swordpoint.
+You stand, shivering with fear, staring at the water below you.
+If you had the use of your hands you could swim easily, but without them...
 
-"I'll untie your hands and let you swim to that island over there if you can complete the lyrics to this sea 
-shanty," the captain says.
+"I'll untie your hands and let you swim to that island over there if you can complete the lyrics
+to this sea shanty," the captain says.
 
 She sings:
 
