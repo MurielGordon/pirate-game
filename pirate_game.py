@@ -71,7 +71,7 @@ class ShipsBrig(Scene):
         which cup the key is under."
         """))
 
-        #time.sleep(15)
+        time.sleep(15)
 
         print(dedent("""
         \n\n
@@ -89,7 +89,7 @@ class ShipsBrig(Scene):
         correct_cup = randint(1,2)
         guess = input("[cup #]> ")
 
-        #loading()
+        loading()
 
         if int(guess) != correct_cup:
             print(f"\n\n\nYou pick cup number {guess}.")
@@ -132,7 +132,7 @@ class ShipsMagazine(Scene):
 
         action = input("> ")
 
-        #loading()
+        loading()
 
         if action == "yes":
             print(dedent("""
@@ -184,7 +184,7 @@ class BosunTalk(Scene):
 
         action = input("> ")
         
-        #loading()
+        loading()
 
         if "trip" in action:
             print(dedent("""

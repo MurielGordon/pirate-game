@@ -67,7 +67,7 @@ What's the last word of the shanty?
 
 action = input("> ")
 
-#loading()
+loading()
 
 if action == "whale":
     sword()

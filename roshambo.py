@@ -28,7 +28,7 @@ def sword():
         
 
 user_action = input("Choose your weapon: rock, paper, or scissors: ")
-#loading()
+loading()
 possible_actions = ["rock", "paper", "scissors"]
 computer_action = random.choice(possible_actions)
 print(f"\n\nYou chose {user_action}, the mermaid chose {computer_action}.\n")
